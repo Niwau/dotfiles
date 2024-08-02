@@ -55,9 +55,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -183,11 +183,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Flameshot Screenshot
+bindsym $mod+p exec flameshot gui
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
 bar {
-        status_command polybar
-	mode hide
+        status_command i3status
 }
 
 # Below is my custom configuration
@@ -207,15 +210,14 @@ assign [class="spotify"] number $ws5
 # Exec programs on startup
 exec google-chrome
 exec discord
+exec picom
 
-# Hide split window indicators
-hide_edge_borders both
+# Show borders only if there is more than one window
+hide_edge_borders smart
 
 # Gaps
 gaps inner 12px
-
-# Gaps at terminals workspace
-workspace $ws3 gaps inner 12px
+smart_gaps off
 
 # Hide top bar
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
