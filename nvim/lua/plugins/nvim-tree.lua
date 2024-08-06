@@ -19,11 +19,11 @@ return {
 	  width = 30,
 	},
 	renderer = {
-	  group_empty = true,
+	  group_empty = false,
 	},
 	filters = {
 	  dotfiles = true,
-	}, 
+	}
       })
 
       vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>', {})
