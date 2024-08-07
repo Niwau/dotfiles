@@ -1,4 +1,5 @@
 vim.cmd("set shiftwidth=2")
+vim.cmd("set relativenumber")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
