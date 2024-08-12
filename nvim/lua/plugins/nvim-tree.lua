@@ -21,12 +21,12 @@ return {
 	renderer = {
 	  group_empty = false,
 	},
-	filters = {
-	  dotfiles = true,
-	}
       })
 
       vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>', {})
+      vim.keymap.set('n', '<leader>r', ':NvimTreeRefresh<cr>', {})
+      vim.keymap.set('n', '<leader>n', ':NvimTreeFindFile<cr>', {})
+
     end
   }
 }
