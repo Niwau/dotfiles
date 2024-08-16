@@ -201,12 +201,12 @@ bindsym $mod+shift+x exec i3lock
 # Set wallpaper
 exec_always feh --bg-scale .config/i3/wallpapers/1.jpg
 
-# Set wallpaper
-exec_always feh --bg-scale .config/i3/wallpapers/1.jpg
-
 # start polybar
 exec_always killall -q polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --panels
+
+exec_always killall -q picom
+exec_always --no-startup-id picom
 
 # Set polybar colors using pywal
 # exec_always --no-startup-id ~/.config/polybar/panels/scripts/pywal.sh ~/.config/i3/wallpapers/1.jpg
@@ -220,7 +220,6 @@ assign [class="spotify"] number $ws5
 # Exec programs on startup
 exec google-chrome
 exec discord
-exec picom
 
 # Show borders only if there is more than one window
 hide_edge_borders smart
