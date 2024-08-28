@@ -26,9 +26,9 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock-fancy to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -196,8 +196,8 @@ bindsym $mod+p exec flameshot gui
 # Below is my custom configuration
 
 # Custom keybinds
-bindsym $mod+shift+x exec i3lock
-
+# bindsym $mod+shift+x exec i3lock-fancy
+bindsym $mod+shift+x exec i3lock-fancy
 # Set wallpaper
 exec_always feh --bg-scale .config/i3/wallpapers/1.jpg
 
@@ -212,13 +212,13 @@ exec_always --no-startup-id picom
 # exec_always --no-startup-id ~/.config/polybar/panels/scripts/pywal.sh ~/.config/i3/wallpapers/1.jpg
 
 # Run programs at workspaces
-assign [class="Google-chrome"] number $ws1 
+assign [class="Firefox"] number $ws1
 assign [class="Code"] number $ws2
 assign [class="discord"] number $ws4 
 assign [class="spotify"] number $ws5
 
 # Exec programs on startup
-exec google-chrome
+exec firefox
 exec discord
 
 # Show borders only if there is more than one window
