@@ -201,15 +201,15 @@ bindsym $mod+shift+x exec i3lock-fancy
 # Set wallpaper
 exec_always feh --bg-scale .config/i3/wallpapers/1.jpg
 
+# Set polybar colors using pywal
+# exec_always --no-startup-id ~/.config/polybar/panels/scripts/pywal.sh ~/.config/i3/wallpapers/1.jpg
+
 # start polybar
 exec_always killall -q polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh --panels
 
 exec_always killall -q picom
 exec_always --no-startup-id picom
-
-# Set polybar colors using pywal
-# exec_always --no-startup-id ~/.config/polybar/panels/scripts/pywal.sh ~/.config/i3/wallpapers/1.jpg
 
 # Run programs at workspaces
 assign [class="Firefox"] number $ws1
@@ -226,7 +226,12 @@ hide_edge_borders smart
 
 # Gaps
 gaps inner 12px
-smart_gaps off
+smart_gaps on
 
 # Hide top bar
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
+
+# Change colors (border, background, text, indicator, child_border)
+client.focused #2e3440 #2e3440 #2e3440 #2e3440 #2e3440
+client.unfocused #2e3440 #2e3440 #2e3440 #2e3440 #2e3440
+client.focused_inactive #2e3440 #2e3440 #2e3440 #2e3440 #2e3440
