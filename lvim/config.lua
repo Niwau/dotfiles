@@ -15,7 +15,7 @@ lvim.plugins = {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
-      flavour = "frappe",
+      flavour = "mocha",
       transparent_background = true
     },
   },
