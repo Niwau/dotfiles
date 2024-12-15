@@ -1,7 +1,7 @@
 @import url("file:///home/guilherme/.cache/wal/colors-waybar.css");
 
 @define-color primary @color0;
-@define-color accent @color1;
+@define-color accent @color2;
 @define-color battery-complete #2D5F26;
 @define-color battery-critical #673232;
 
@@ -24,6 +24,15 @@ window#waybar {
   background: @primary;
   padding: 8px;
   border-radius: 8px;
+}
+
+#workspaces {
+  background: @primary;
+  border-radius: 8px;
+}
+
+#workspaces button.active {
+  background: @accent;
 }
 
 #custom-distro, #bluetooth {

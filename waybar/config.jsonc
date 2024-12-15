@@ -4,10 +4,11 @@
   "spacing": 8,
   "modules-left": [
     "custom/distro",
+    "hyprland/workspaces",
     "cpu",
     "memory",
     "disk",
-    "temperature"
+    "temperature",
   ],
   "modules-center": [
     "clock",
@@ -23,6 +24,13 @@
   "custom/distro": {
     "format": "󰣇",
     "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 5, 
+    },
   },
   "cpu": {
     "format": "   {usage}%",
