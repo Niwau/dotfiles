@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 8,
+  "modules-left": [
+    "custom/distro",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+  ],
+  "modules-center": [
+    "clock",
+    "clock#time"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    // "bluetooth",
+    "battery"
+  ],
+  "reload_style_on_change": true,
+  "custom/distro": {
+    "format": "󰣇",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 5, 
+    },
+  },
+  "cpu": {
+    "format": "   {usage}%",
+    "interval": 1
+  },
+  "memory": {
+    "format": "󰀻  {percentage}%",
+    "interval": 1
+  },
+  "disk": {
+    "format": "   {percentage_used}%"
+  },
+  "temperature": {
+    "format": "  {temperatureC}°C"
+  },
+  "clock": {
+    "format": "   {:%A, %d %B}"
+  },
+  "clock#time": {
+    "format": "   {:%H:%M}"
+  },
+  "network": {
+    "format-wifi": "    {essid}",
+    "format-disconnected": "     Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "format-ethernet": "󱘖    Connected",
+  },
+  "pulseaudio": {
+    "format": "    {volume}%",
+    "format-bluetooth": "    {volume}%",
+    "format-muted": " ",
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-connected": "󰂯 {device_alias}",
+    "format-disabled": "󰂲",
+    "on-click": "blueman-manager",
+    "tooltip": true,
+    "tooltip-format-connected": " {device_alias} {device_battery_percentage}%"
+  },
+  "battery": {
+    "format": "{icon}    {capacity}%",
+    "interval": 1,
+    "format-charging": " {icon}    {capacity}%",
+    "states": {
+      "critical": 10,
+      "low": 20,
+      "medium": 50,
+      "good": 70,
+      "full": 90,
+      "complete": 100
+    },
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+}
