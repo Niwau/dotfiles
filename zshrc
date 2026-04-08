@@ -1,11 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Android Studio Configuration
-export PATH="$PATH:$HOME/android-studio/bin"
+# export PATH="$PATH:$HOME/android-studio/bin"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export JAVA_HOME="/usr/lib/jvm/java-24-openjdk"
 
@@ -132,8 +132,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # k9s
 export EDITOR="nvim"
 export KUBE_EDITOR="nvim"
+
+# Created by `pipx` on 2026-02-17 17:30:15
+export PATH="$PATH:/home/guilherme/.local/bin"
