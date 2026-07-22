@@ -1,7 +1,8 @@
 @import url("file:///home/guilherme/.cache/wal/colors-waybar.css");
+@import url("file:///home/guilherme/.cache/wal/accent.css");
 
 @define-color primary @color0;
-@define-color accent @color2;
+@define-color accent @color5;
 @define-color battery-complete #2D5F26;
 @define-color battery-critical #673232;
 
