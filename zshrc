@@ -115,20 +115,17 @@ alias vpnd="sudo wg-quick down /etc/wireguard/guilherme.conf";
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
 # Not supported in the "fish" shell.
-(cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+[ -f ~/.cache/wal/sequences ] && (cat ~/.cache/wal/sequences &)
 
 # To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
+# source ~/.cache/wal/colors-tty.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # bun completions
-[ -s "/home/guilherme/.bun/_bun" ] && source "/home/guilherme/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -139,4 +136,4 @@ export EDITOR="nvim"
 export KUBE_EDITOR="nvim"
 
 # Created by `pipx` on 2026-02-17 17:30:15
-export PATH="$PATH:/home/guilherme/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"

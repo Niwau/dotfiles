@@ -12,7 +12,7 @@
 - **Terminal:** Kitty + Tmux (TPM)
 - **Shell:** Zsh + Spaceship
 - **Editor:** Neovim
-- **Theme:** Pywal + Waypaper
+- **Theme:** Pywal16 + Waypaper (awww backend)
 - **Utils:** Waybar, SwayNC, Lazygit, K9s
 - **Extra:** Hyprpicker, Hyprshot
 
@@ -32,8 +32,11 @@
 **1. Dependencies** (Arch Linux example)
 
 ```bash
-sudo pacman -S git python hyprland kitty tmux neovim zsh waybar swaync lazygit hyprpicker hyprshot
+sudo pacman -S git python imagemagick hyprland kitty tmux neovim zsh waybar swaync lazygit hyprpicker hyprshot ttf-space-mono-nerd awww
+yay -S python-pywal16 waypaper
 ```
+
+> Use **pywal16**, not the old `wal` bash script (it doesn't generate templates). Waybar imports `~/.cache/wal/colors-waybar.css`. Waypaper runs `wal` and reloads Waybar every time the wallpaper changes.
 
 **2. Clone & Install**
 

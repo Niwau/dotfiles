@@ -1,9 +1,10 @@
 import json
+import os
 import socket
 import time
 
 # Lê a cor principal do Pywal
-with open("/home/guilherme/.cache/wal/colors.json") as f:
+with open(os.path.expanduser("~/.cache/wal/colors.json")) as f:
     colors = json.load(f)
 
 primary_color = colors["colors"]["color1"].lstrip("#")

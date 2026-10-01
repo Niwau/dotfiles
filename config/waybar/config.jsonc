@@ -4,7 +4,7 @@
   "spacing": 8,
   "modules-left": ["custom/distro", "cpu", "memory", "disk", "temperature"],
   "modules-center": ["clock", "clock#time"],
-  "modules-right": ["network", "pulseaudio", "battery"],
+  "modules-right": ["network", "pulseaudio", "bluetooth", "battery"],
   "reload_style_on_change": true,
   "custom/distro": {
     "format": "󰣇",
@@ -18,34 +18,34 @@
     },
   },
   "cpu": {
-    "format": "   {usage}%",
+    "format": " {usage}%",
     "interval": 1,
   },
   "memory": {
-    "format": "󰀻  {percentage}%",
+    "format": "󰀻 {percentage}%",
     "interval": 1,
   },
   "disk": {
-    "format": "   {percentage_used}%",
+    "format": " {percentage_used}%",
   },
   "temperature": {
-    "format": "  {temperatureC}°C",
+    "format": " {temperatureC}°C",
   },
   "clock": {
-    "format": "   {:%A, %d %B}",
+    "format": " {:%A, %d %B}",
   },
   "clock#time": {
-    "format": "   {:%H:%M}",
+    "format": "  {:%H:%M}",
   },
   "network": {
-    "format-wifi": "    {essid}",
+    "format-wifi": "  {essid}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
-    "format-disconnected": "     Disconnected",
-    "format-ethernet": "󱘖    Connected",
+    "format-disconnected": " Disconnected",
+    "format-ethernet": "󱘖 Connected",
   },
   "pulseaudio": {
-    "format": "    {volume}%",
-    "format-bluetooth": "    {volume}%",
+    "format": "  {volume}%",
+    "format-bluetooth": "  {volume}%",
     "format-muted": " ",
     "on-click": "pavucontrol",
     "scroll-step": 5,
@@ -61,9 +61,9 @@
     "tooltip-format-connected": " {device_alias} {device_battery_percentage}%",
   },
   "battery": {
-    "format": "{icon}    {capacity}%",
+    "format": "{icon} {capacity}%",
     "interval": 1,
-    "format-charging": " {icon}    {capacity}%",
+    "format-charging": " {icon} {capacity}%",
     "states": {
       "critical": 10,
       "low": 20,

@@ -1,5 +1,5 @@
-@import url("file:///home/guilherme/.cache/wal/colors-waybar.css");
-@import url("file:///home/guilherme/.cache/wal/accent.css");
+/* wal.css -> ~/.cache/wal/colors-waybar.css (symlink created by ./install) */
+@import url("wal.css");
 
 @define-color primary @color0;
 @define-color accent @color5;
@@ -7,8 +7,8 @@
 @define-color battery-critical #673232;
 
 * {
-  font-family: "SpaceMono NF";
-  font-size: 12px;
+  font-family: "SpaceMono Nerd Font";
+  font-size: 11px;
   transition: background-color 0.3s ease-out;
   color: #fff;
 }
@@ -34,7 +34,7 @@ window#waybar {
 #bluetooth,
 #battery {
   background: @primary;
-  padding: 8px;
+  padding: 12px;
   border-radius: 8px;
 }
 

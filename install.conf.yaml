@@ -15,3 +15,8 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - command: '[ -f ~/.cache/wal/colors-waybar.css ] || wal -i ~/.config/wallpapers/fb0719a22a1115674f38848dbfe05855.jpg -n -q'
+      description: Generating initial pywal colorscheme
+      stdout: true
+      stderr: true
+    - [ln -sfn ~/.cache/wal/colors-waybar.css ~/.config/waybar/wal.css, Linking pywal colors into Waybar]
